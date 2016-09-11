@@ -1,0 +1,34 @@
+{
+  "name": "Sensor_table",
+  "plural": "Sensor_tables",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "deviceId": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "sensor_categoryId": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "payload": {
+      "type": "string",
+      "default": " "
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "IOTweb": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "IOTweb",
+    "password": "",
+    "name": "IOTweb",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

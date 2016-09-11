@@ -1,0 +1,70 @@
+{
+  "name": "Device",
+  "plural": "Devices",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "device_name": {
+      "type": "string",
+      "default": " "
+    },
+    "model": {
+      "type": "string",
+      "default": " "
+    },
+    "hashID": {
+      "type": "string",
+      "default": " "
+    },
+    "accountID": {
+      "type": "string",
+      "default": " "
+    },
+    "serialID": {
+      "type": "string",
+      "default": " "
+    },
+    "manufacture": {
+      "type": "string",
+      "default": " "
+    },
+    "location": {
+      "type": "geopoint",
+      "default": {
+        "lat": 0,
+        "lng": 0
+      }
+    },
+    "created_date": {
+      "type": "date",
+      "default": " "
+    },
+    "updated_date": {
+      "type": "date",
+      "default": " "
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sensorCategories": {
+      "type": "hasAndBelongsToMany",
+      "model": "Sensor_category",
+      "foreignKey": ""
+    },
+    "sensorTables": {
+      "type": "hasMany",
+      "model": "Sensor_table",
+      "foreignKey": "deviceId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

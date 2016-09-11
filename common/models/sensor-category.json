@@ -1,0 +1,46 @@
+{
+  "name": "Sensor_category",
+  "plural": "Sensor_categories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "sensor_name": {
+      "type": "string",
+      "default": " "
+    },
+    "type": {
+      "type": "string",
+      "default": " "
+    },
+    "datatypes": {
+      "type": "string",
+      "default": " "
+    },
+    "created_date": {
+      "type": "date",
+      "default": " "
+    },
+    "updated_date": {
+      "type": "date",
+      "default": " "
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sensorTables": {
+      "type": "hasMany",
+      "model": "Sensor_table",
+      "foreignKey": "sensor_categoryId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

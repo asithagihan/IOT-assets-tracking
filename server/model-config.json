@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "IOTweb",
+	 "public": true,
+    "options": {
+      "emailVerificationRequired": false
+    }
+  },
+  "AccessToken": {
+    "dataSource": "IOTweb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "IOTweb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "IOTweb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "IOTweb",
+    "public": false
+  },
+  "Account": {
+    "dataSource": "IOTweb",
+    "public": true
+  },
+  "Sensor_category": {
+    "dataSource": "IOTweb",
+    "public": true
+  },
+  "Device": {
+    "dataSource": "IOTweb",
+    "public": true
+  },
+  "Sensor_table": {
+    "dataSource": "IOTweb",
+    "public": true
+  }
+}

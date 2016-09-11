@@ -1,0 +1,42 @@
+{
+  "name": "Account",
+  "plural": "Accounts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "userID": {
+      "type": "string",
+      "default": " "
+    },
+    "hash_key": {
+      "type": "string",
+      "default": " "
+    },
+    "created_date": {
+      "type": "date",
+      "default": " "
+    },
+    "updated_date": {
+      "type": "date",
+      "default": " "
+    }
+  },
+  "validations": [],
+  "relations": {
+    "devices": {
+      "type": "hasMany",
+      "model": "Device",
+      "foreignKey": "accountId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
